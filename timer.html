@@ -27,7 +27,7 @@
   <body>
     <table class="countdownContainer">
       <tr colspan="4" class="info">
-        <td></td>
+        <td>Change name timer</td>
       </tr>
       <tr>
         <td id="days"></td>
@@ -45,7 +45,7 @@
     <script>
       function countdown(){
         var now = new Date();
-        var eventDate = new Date();
+        var eventDate = new Date(2019, 4, 30);
         
         var currentTime = now.getTime();
         var eventTime = eventDate.getTime();
