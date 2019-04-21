@@ -3,10 +3,30 @@
   <head>
     <title>Event Timer</title>
     <meta charset="UTF-8">
+    <style>
+      body {
+        background: #f6f6f6;
+      }
+      .countdownContainer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translatey(-50%);
+        text-align: center;
+        background: #ddd;
+        border: 1px solid #999;
+        padding: 10px;
+        box-shadow: 0 0 5px 3px #ccc;
+      }
+      
+      .info{
+        font-size: 80px;
+      }
+    </style>
   </head>
   <body>
-    <table>
-      <tr>
+    <table class="countdownContainer">
+      <tr colspan="4" class="info">
         <td></td>
       </tr>
       <tr>
@@ -45,20 +65,22 @@
         n = (m<10) ? "0" : m;
         s = (s<10) ? "0" : s;
         
-        document.getElementById("").textContent = d;
-        document.getElementById("").innerText = d;
+        document.getElementById("days").textContent = d;
+        document.getElementById("days").innerText = d;
         
-        document.getElementById("").textContent = h;
-        document.getElementById("").innerText = h;
+        document.getElementById("hours").textContent = h;
+        document.getElementById("hours").innerText = h;
         
-        document.getElementById("").textContent = m;
-        document.getElementById("").innerText = m;
+        document.getElementById("minutes").textContent = m;
+        document.getElementById("minutes").innerText = m;
         
-        document.getElementById("").textContent = s;
-        document.getElementById("").innerText = s;
+        document.getElementById("seconds").textContent = s;
+        document.getElementById("seconds").innerText = s;
         
         setTimeout(countdown, 1000);
       }
+      
+      countdown();
     </script>
   </body>
 </html>
